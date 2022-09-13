@@ -1,0 +1,23 @@
+a{
+    color:#ffffff !important;
+    font-weight: bold !important;
+  }
+body{
+    background: #000;
+}
+.navbar-md{
+    display:none !important;
+}
+.navbar-lg form{
+    width: 35%;
+    margin-left:10%;
+}
+@media (max-width: 992px) {
+    .navbar-md{
+        display: block !important;
+    }
+    .navbar-lg{
+        display: none !important;
+    }
+}
+    

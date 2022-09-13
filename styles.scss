@@ -1,0 +1,9 @@
+$primary: #8E79BA;
+$secundary: #ffffff;
+
+$theme-colors:(
+    "primary": $primary,
+    "secundary": $secundary   
+);
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss"
