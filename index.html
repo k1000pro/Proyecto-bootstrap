@@ -12,12 +12,18 @@
 
 <body>
     <div class="navbar-lg">
-        <nav class="navbar navbar-expand-lg bg-primary">
+        <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
             <div class="container-fluid d-flex justify-content-between">
-                <a class="navbar-brand" href="index.html"><img src="/icons/logo.png">Tienda Cellphone</a>
+                <a class="navbar-brand" href="index.html"><img src="/icons/logo.png"><strong>TIENDA
+                        CELLPHONE</strong></a>
 
                 <form class="d-flex" role="search">
-                    <input class="form-control me-5" type="search" placeholder="Search" aria-label="Search">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text shadow" id="addon-wrapping"><img src="icons/magnifier-1214318.png"
+                                width="25"></span>
+                        <input type="text" class="form-control shadow" placeholder="Buscar" aria-label="Buscar"
+                            aria-describedby="addon-wrapping">
+                    </div>
                 </form>
                 <ul class="navbar-nav flex-row flex-wrap ms-md-auto align-items-center ">
                     <li class="nav-item text-center align-self-center ">
@@ -27,10 +33,14 @@
                         <a class="nav-link" href="#">Estadisticas</a>
                     </li>
                     <li class="nav-item text-center align-self-center">
-                        <a class="nav-link" href="#"><img src="/icons/logo.png"></a>
+                        <a class="nav-link" href="#"><img src="/icons/nuevoAnuncio.png" width="35"></a>
                     </li>
                     <li class="nav-item text-center align-self-center">
-                        <a class="nav-link" href="#"><img src="/icons/logo.png"></a>
+                        <a class="nav-link" href="#"><img src="/icons/carritoBlanco.png">
+                            <span
+                                class="position top-0 start-100 translate-middle badge rounded-pill text-bg-secundary">
+                                2
+                            </span></a>
                     </li>
                 </ul>
 
@@ -38,7 +48,7 @@
         </nav>
     </div>
     <div class="navbar-md">
-        <nav class="navbar navbar-expand-lg bg-primary">
+        <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
             <div class="container-fluid d-flex justify-content-between">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -46,31 +56,38 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-5" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping"><img src="icons/magnifier-1214318.png"
+                                width="25px"></span>
+                        <input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar"
+                            aria-describedby="addon-wrapping">
+                    </div>
+
                 </form>
 
 
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
 
                     <ul class="navbar-nav">
-                        
-                        <li class="nav-item text-center align-self-center col-12">
-                            <a class="nav-link" aria-current="page" href="#"><img src="/icons/logo.png">TIENDA CELLPHONE</a>
+                        <br>
+                        <li class="nav-item text-center align-self-center ">
+                            <h4><img src="/icons/logo.png"><strong>TIENDA
+                                    CELLPHONE</strong></h4>
                         </li>
                         <hr>
-                        <li class="nav-item text-center align-self-center col-12">
+                        <li class="nav-item text-center align-self-center">
                             <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                         </li>
                         <hr>
-                        <li class="nav-item text-center align-self-center col-12">
+                        <li class="nav-item text-center align-self-center ">
                             <a class="nav-link" href="#">Nuevo anuncio</a>
                         </li>
                         <hr>
-                        <li class="nav-item text-center align-self-center col-12 ">
+                        <li class="nav-item text-center align-self-center  ">
                             <a class="nav-link" href="#">Carrito</a>
                         </li>
                         <hr>
-                        <li class="nav-item text-center align-self-center col-12 ">
+                        <li class="nav-item text-center align-self-center">
                             <a class="nav-link" href="#">Estadisticas</a>
                         </li>
                     </ul>
@@ -79,8 +96,379 @@
                 </div>
             </div>
         </nav>
+    </div>
+
+    <div class="container-fluid main-container row ms-0">
+        <div class="container sidebar-md-container mt-2 ">
+            <sidebar class="sidebar-md ">
+                <div class="input-group order-form ">
+                    <span class="input-group-text" id="basic-addon1">Ordenar por:</span>
+                    <select class="form-select form-select-sm rounded" aria-label="Precio">
+                        <option selected>Precio</option>
+                        <option value="Fecha">Fecha</option>
+                    </select>
+                    <button class="btn btn-primary ms-2 rounded" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="icons/filtra-blancor.png"
+                            width="25"></button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Filtrar</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="nuevoSwitch" checked>
+    
+                                <label class="form-check-label" for="nuevoSwitch">Nuevo</label>
+                            </div>
+    
+                            <fieldset class="container fieldset-marca rounded">
+                                <legend>Marca</legend>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="marcaRadio" id="marcaRadio1">
+                                    <label class="form-check-label" for="marcaRadio1">
+                                        Huawei
+                                        <span class="badge text-bg-primary">4</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="marcaRadio" id="marcaRadio2">
+                                    <label class="form-check-label" for="marcaRadio2">
+                                        Samsung
+                                        <span class="badge text-bg-primary">10</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="marcaRadio" id="marcaRadio3">
+                                    <label class="form-check-label" for="marcaRadio3">
+                                        Nokia
+                                        <span class="badge text-bg-primary">10</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="marcaRadio" id="marcaRadio4">
+                                    <label class="form-check-label" for="marcaRadio4">
+                                        iPhone
+                                        <span class="badge text-bg-primary">10</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="marcaRadio" id="marcaRadio5">
+                                    <label class="form-check-label" for="marcaRadio5">
+                                        Xiaomi
+                                        <span class="badge text-bg-primary">10</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <fieldset class="container fieldset-sistema rounded">
+                                <legend>Sistema</legend>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="sistemaRadio" id="sistemaRadio1">
+                                    <label class="form-check-label" for="sistemaRadio1">
+                                        Android
+                                        <span class="badge text-bg-primary">4</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="sistemaRadio" id="sistemaRadio2">
+                                    <label class="form-check-label" for="sistemaRadio2">
+                                        Windows
+                                        <span class="badge text-bg-primary">19</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="sistemaRadio" id="sistemaRadio3">
+                                    <label class="form-check-label" for="sistemaRadio3">
+                                        IOS
+                                        <span class="badge text-bg-primary">12</span>
+                                    </label>
+                                </div>
+    
+                            </fieldset>
+                            <fieldset class="container fieldset-pantalla rounded">
+                                <legend>Pantalla</legend>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pantallaRadio" id="pantallaRadio1">
+                                    <label class="form-check-label" for="pantallaRadio1">
+                                        6.0
+                                        <span class="badge text-bg-primary">4</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pantallaRadio" id="pantallaRadio2">
+                                    <label class="form-check-label" for="pantallaRadio2">
+                                        5.5
+                                        <span class="badge text-bg-primary">2</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pantallaRadio" id="pantallaRadio3">
+                                    <label class="form-check-label" for="pantallaRadio3">
+                                        5.0
+                                        <span class="badge text-bg-primary">3</span>
+                                    </label>
+                                </div>
+    
+                            </fieldset>
+    
+                        </div>
+                    </div>
+                </div>
+    
+            </sidebar>
+        </div>
+
+        <div class="container sidebar-lg-container m-2 col-lg-2 ">
+            <sidebar class="sidebar-lg">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="nuevoSwitch" checked>
+
+                    <label class="form-check-label" for="nuevoSwitch">Nuevo</label>
+                </div>
+                <fieldset class="container fieldset-marca rounded mt-2">
+                    <legend>Marca</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="marcaRadio" id="marcaRadio1">
+                        <label class="form-check-label" for="marcaRadio1">
+                            Huawei
+                            <span class="badge text-bg-primary">4</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="marcaRadio" id="marcaRadio2">
+                        <label class="form-check-label" for="marcaRadio2">
+                            Samsung
+                            <span class="badge text-bg-primary">10</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="marcaRadio" id="marcaRadio3">
+                        <label class="form-check-label" for="marcaRadio3">
+                            Nokia
+                            <span class="badge text-bg-primary">10</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="marcaRadio" id="marcaRadio4">
+                        <label class="form-check-label" for="marcaRadio4">
+                            iPhone
+                            <span class="badge text-bg-primary">10</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="marcaRadio" id="marcaRadio5">
+                        <label class="form-check-label" for="marcaRadio5">
+                            Xiaomi
+                            <span class="badge text-bg-primary">10</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="container fieldset-sistema rounded mt-2">
+                    <legend>Sistema</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sistemaRadio" id="sistemaRadio1">
+                        <label class="form-check-label" for="sistemaRadio1">
+                            Android
+                            <span class="badge text-bg-primary">4</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sistemaRadio" id="sistemaRadio2">
+                        <label class="form-check-label" for="sistemaRadio2">
+                            Windows
+                            <span class="badge text-bg-primary">19</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sistemaRadio" id="sistemaRadio3">
+                        <label class="form-check-label" for="sistemaRadio3">
+                            IOS
+                            <span class="badge text-bg-primary">12</span>
+                        </label>
+                    </div>
+
+                </fieldset>
+                <fieldset class="container fieldset-pantalla rounded mt-2">
+                    <legend>Pantalla</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pantallaRadio" id="pantallaRadio1">
+                        <label class="form-check-label" for="pantallaRadio1">
+                            6.0
+                            <span class="badge text-bg-primary">4</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pantallaRadio" id="pantallaRadio2">
+                        <label class="form-check-label" for="pantallaRadio2">
+                            5.5
+                            <span class="badge text-bg-primary">2</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pantallaRadio" id="pantallaRadio3">
+                        <label class="form-check-label" for="pantallaRadio3">
+                            5.0
+                            <span class="badge text-bg-primary">3</span>
+                        </label>
+                    </div>
+
+                </fieldset>
+
+            </sidebar>
+        </div>
+
+        <div class=" row row-cols-2 row-cols-md-3 row-cols-sm-2 row-cols-lg-4 g-4 cards-container col-md-12 col-lg-10 ">
+            <div class="card order-card border border-0 row ms-3 d-none d-lg-flex">
+                <div class="form-group col-6 ordenarMaxMinPrecio">
+                    <div class="row">
+                        <div class="input-group mb-3 col ">
+                            <span class="input-group-text " id="precioSpan">Precio:</span>
+                            <input type="text" class="form-control border-primary" placeholder="$" aria-label="Precio"
+                                aria-describedby="precioSpan">
+                            <span class="input-group-text" id="maxPrecioSpan">Hasta:</span>
+                            <input type="text" class="form-control border-primary" placeholder="$"
+                                aria-label="maxPrecio" aria-describedby="maxPrecioSpan">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-6 ordenarPorFechaPrecio">
+                    <div class="row">
+                        <div class="input-group mb-3 col ">
+                            <span class="input-group-text" id="OrderBtns">Ordenar por:</span>
+                            <button class="btn btn-primary precioOrderBtn text-secundary" type="button"><span
+                                    class="iconoFlechaSecundary"><img src="icons/flecha-abajo-blanca.png"
+                                        width="20"></span>Precio</button>
+                            <button class="btn btn-primary fechaOrderBtn text-secundary" type="button">Fecha</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col card-div">
+                <div class="card h-100 border border-0 shadow-lg p-3 mb-5 rounded">
+                    <img src="/icons/iphone.jpg" class="card-img-top img-thumbnail m-1 border-light" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">132.00</h5>
+                        <p class="card-text">Samsung J6, Pantalla de 5.5
+                            64GB, 2GB Ram, Color Negro</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col card-div">
+                <div class="card h-100 border border-0 shadow-lg p-3 mb-5 rounded">
+                    <img src="/icons/samsung.jpeg" class="card-img-top img-thumbnail m-1 border-light" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">132.00</h5>
+                        <p class="card-text">Samsung J6, Pantalla de 5.5
+                            64GB, 2GB Ram, Color Negro</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col card-div">
+                <div class="card h-100 border border-0 shadow-lg p-3 mb-5 rounded">
+                    <img src="/icons/zflip.jpeg" class="card-img-top img-thumbnail m-1 border-light" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">132.00</h5>
+                        <p class="card-text">Samsung J6, Pantalla de 5.5
+                            64GB, 2GB Ram, Color Negro</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col card-div">
+                <div class="card h-100 border border-0 shadow-lg p-3 mb-5 rounded">
+                    <img src="/icons/huawei.jpg" class="card-img-top img-thumbnail m-1 border-light" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">132.00</h5>
+                        <p class="card-text">Samsung J6, Pantalla de 5.5
+                            64GB, 2GB Ram, Color Negro</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col card-div">
+                <div class="card h-100 border border-0 shadow-lg p-3 mb-5 rounded">
+                    <img src="/icons/zflip.jpeg" class="card-img-top img-thumbnail m-1 border-light" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">132.00</h5>
+                        <p class="card-text">Samsung J6, Pantalla de 5.5
+                            64GB, 2GB Ram, Color Negro</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col  card-div">
+                <div class="card h-100 border border-0 shadow-lg p-3 mb-5 rounded">
+                    <img src="/icons/huawei.jpg" class="card-img-top img-thumbnail m-1 border-light" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">132.00</h5>
+                        <p class="card-text">Samsung J6, Pantalla de 5.5
+                            64GB, 2GB Ram, Color Negro</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col card-div">
+                <div class="card h-100 border border-0 shadow-lg p-3 mb-5 rounded">
+                    <img src="/icons/iphone.jpg" class="card-img-top img-thumbnail m-1 border-light" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">132.00</h5>
+                        <p class="card-text">Samsung J6, Pantalla de 5.5
+                            64GB, 2GB Ram, Color Negro</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col card-div">
+                <div class="card h-100 border border-0 shadow-lg p-3 mb-5 rounded">
+                    <img src="/icons/samsung.jpeg" class="card-img-top img-thumbnail m-1 border-light" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">132.00</h5>
+                        <p class="card-text">Samsung J6, Pantalla de 5.5
+                            64GB, 2GB Ram, Color Negro</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
     </div>
+    <footer class="container-fluid row footer-container">
+        <nav aria-label="Products Pages" class="col-12 col-lg-8">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        <div class="col-4 d-none d-lg-block ">
+            <div class="input-group">
+                <span class="input-group-text " id="productsPerPageSpan">Productos por pagina:</span>
+                <select class="form-select form-select-sm rounded selectProductsPerPage" aria-label="productosPerPage"
+                    aria-describedby="productsPerPageSpan">
+                    <option selected>8</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                </select>
+
+            </div>
+
+        </div>
+    </footer>
 
 
 
