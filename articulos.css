@@ -1,10 +1,7 @@
 a{
     color:#ffffff !important;
     font-weight: bold !important;
-  }
-/* body{
-    background: #000;
-} */
+}
 .navbar-md{
     display:none !important;
 }
@@ -18,5 +15,32 @@ a{
     }
     .navbar-lg{
         display: none !important;
+    }
+    .btnInferior{
+        position: fixed !important;
+        top: 93%;
+        border-radius: 0;
+        border-color: black;
+    }
+    .comprarBtn{
+        left: 50%;
+    }
+    .inicioBtn{
+        left: 35%;
+        display: block !important;
+    }
+    .infoDeVendedor{
+        border: 0 !important;
+    }
+    .precio{
+        text-align: center !important;
+    }
+}
+@media(max-width: 500px){
+    .comprarBtn{
+        left: 45% !important;
+    }
+    .inicioBtn{
+        left: 24% !important;
     }
 }
