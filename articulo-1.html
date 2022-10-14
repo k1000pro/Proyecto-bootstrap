@@ -10,16 +10,16 @@
     <title>Tienda De Telefonos</title>
 </head>
 <body>
-    
-    <div class="navbar-lg  d-none d-md-non d-lg-block sticky-top">
+    <!-- Navbar -->
+    <div class="navbar-lg sticky-top">
         <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
-            <div class="container-fluid d-flex justify-content-between">
+            <div class="container-fluid d-none d-md-none d-lg-flex justify-content-between ">
                 <a class="navbar-brand" href="index.html"><img src="/icons/logo.png"><strong>TIENDA
                         CELLPHONE</strong></a>
-
-                <form class="d-flex" role="search">
+                <form class="d-flex searchInputLg" role="search">
                     <div class="input-group flex-nowrap">
-                        <span class="input-group-text shadow" id="addon-wrapping"><i class="bi bi-search" style="color:#8E79BA"></i></span>
+                        <span class="input-group-text shadow" id="addon-wrapping"><i class="bi bi-search"
+                                style="color:#8E79BA"></i></span>
                         <input type="text" class="form-control shadow" placeholder="Buscar" aria-label="Buscar"
                             aria-describedby="addon-wrapping">
                     </div>
@@ -35,7 +35,6 @@
                         <a class="nav-link" href="#"><i class="bi bi-plus-circle-fill" style="font-size: 25px;"
                                 data-bs-toggle="modal" data-bs-target="#ModalGrande"></i></a>
                     </li>
-
                     <li class="nav-item text-center align-self-center">
                         <a class="nav-link" href="#"><i class="bi bi-cart-fill" style="font-size: 30px;"></i>
                             <span
@@ -44,24 +43,177 @@
                             </span></a>
                     </li>
                 </ul>
-
+            </div>
+            <div class="container-fluid d-lg-none d-flex justify-content-between">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="d-flex" role="search">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping"><i class="bi bi-search"
+                                style="color:#8E79BA"></i></span>
+                        <input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar"
+                            aria-describedby="addon-wrapping">
+                    </div>
+                </form>
+                <div class="offcanvas offcanvas-start bg-primary" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel" data-bs-scroll="true" data-bs-backdrop="false">
+                    <button type="button" class="btn-close btn-close-white m-3" data-bs-dismiss="offcanvas"
+                        aria-label="Close"> HOLaa</button>
+                    <div class="offcanvas-header justify-content-center mt-2">
+                        <h4 class="text-secundary"><img src="/icons/logo.png"><strong>TIENDA
+                                CELLPHONE</strong></h4>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav">
+                            <hr class="border border-secundary border-1 opacity-10 ">
+                            <li class="nav-item text-center align-self-center">
+                                <a class="nav-link active fw-bold" aria-current="page" href="index.html">Inicio</a>
+                            </li>
+                            <hr class="border border-secundary border-1 opacity-10 ">
+                            <li class="nav-item text-center align-self-center " data-bs-dismiss="offcanvas"
+                            aria-label="Close">
+                                <a class="nav-link fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#ModalGrande" >Nuevo
+                                    anuncio</a>
+                            </li>
+                            <hr class="border border-secundary border-1 opacity-10">
+                            <li class="nav-item text-center align-self-center  ">
+                                <a class="nav-link fw-bold" href="#">Carrito</a>
+                            </li>
+                            <hr class="border border-secundary border-1 opacity-10 ">
+                            <li class="nav-item text-center align-self-center">
+                                <a class="nav-link fw-bold" href="#">Estadisticas</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </nav>
     </div>
+    <!-- Fin de Navbar -->
 
-    <!-- Modal grande -->
+    <!-- Modal -->
     <div class="modal fade " id="ModalGrande" tabindex="-1" aria-labelledby="ModalGrandeLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
+            <!-- Modal Pequeño -->
+            <div class="modal-content d-flex  d-lg-none">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo anuncio</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid ">
+                        <div class="row">
+                            <div class="col-12">
+                                <div id="carouselExampleIndicators" class="carousel slide carousel-dark carousel-fade">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide-to="0" class="active" aria-current="true"
+                                            aria-label="Slide 1"></button>
+                                        <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active no-img">
+                                            <button class="btn btn-primary mx-auto d-block my-5 text-white"><img
+                                                    src="/icons/nuevoAnuncio.png" alt="Agregar imagen"
+                                                    width="50"><br>Agregar foto</button>
+                                        </div>
+                                        <!-- <div class="carousel-item">
+                                                <img src="/icons/samsung.jpeg" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="/icons/iphone.jpg" class="d-block w-100" alt="...">
+                                            </div> -->
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 titulo-producto">
+                                <fieldset class="rounded border border-primary">
+                                    <legend class="text float-none w-auto m-2">Titulo
+                                    </legend>
+                                    <div class="input-group">
+                                        <textarea class="form-control border-primary border border-0"
+                                            aria-label="With textarea"
+                                            placeholder="Escribe un titulo para tu producto..."></textarea>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 mx-auto">
+                                <div class="input-group input-group-sm my-2 ">
+                                    <span class="input-group-text" id="precioNuevoProducto-span">Precio:</span>
+                                    <input type="text" class="form-control border-primary border" placeholder="Precio"
+                                        aria-label="precioNuevoProducto-input"
+                                        aria-describedby="precioNuevoProducto-span">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 mx-auto">
+                                <div class="input-group input-group-sm my-2 ">
+                                    <span class="input-group-text" id="vendedor-span">Vendedor:</span>
+                                    <input type="text" class="form-control border-primary border "
+                                        placeholder="Nombre del vendedor" aria-label="vendedor-input"
+                                        aria-describedby="vendedor-span">
+                                </div>
+                            </div>
+                            <div class="col-6 mx-auto">
+                                <div class="input-group input-group-sm my-2 ">
+                                    <span class="input-group-text" id="telefonoVendedor-span">Telefono:</span>
+                                    <input type="text" class="form-control border-primary border "
+                                        placeholder="xxxx-xxxx" aria-label="telefonoVendedor-input"
+                                        aria-describedby="telefonoVendedor-span">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-group">
+                                <textarea class="form-control border-primary border border-1 my-1 "
+                                    aria-label="detalles-hardware"
+                                    placeholder="Escribe los detalles tecnicos del producto..."></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-group">
+                                <textarea class="form-control border-primary border border-1 "
+                                    aria-label="estado-producto"
+                                    placeholder="Escribe el estado del producto..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary text-secundary" id="liveToastBtn1"
+                        data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-check-lg"></i>
+                        Crear</button>
+                </div>
+            </div>
+            <!-- Fin Modal Pequeño -->
+            <!-- Modal Grande -->
+            <div class="modal-content d-none d-md-non d-lg-block">
                 <div class="modal-header p-0 p-xl-2 bg-primary">
                     <h1 class="modal-title fs-9 container d-flex justify-content-center p-0" id="ModalGrandeLabel">Nuevo
                         anuncio</h1>
-
                 </div>
                 <div class="modal-body p-2 d-flex justify-content-center align-items-center">
                     <div class="container ">
                         <div class="row d-flex justify-content-evenly p-0 m-0 ">
-
                             <div class="col-12 col-lg-5">
                                 <!-- Div de cuestionario -->
                                 <fieldset class="container border border-primary fieldset-pantalla rounded">
@@ -84,13 +236,13 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="row g-2  pb-lg-2 container-fluid">
                                             <div class="col-2 me-2">
                                                 <label for="inputTextMarca" class="col-form-label">Marca: </label>
                                             </div>
                                             <div class="col-3">
-                                                <input type="text" id="inputTextMarca" class="form-control border-primary border-primary"
+                                                <input type="text" id="inputTextMarca"
+                                                    class="form-control border-primary border-primary"
                                                     aria-label="default input example">
                                             </div>
                                         </div>
@@ -99,22 +251,22 @@
                                                 <label for="inputTextModelo" class="col-form-label">Modelo:</label>
                                             </div>
                                             <div class="col-3">
-                                                <input type="text" id="inputTextModelo" class="form-control border-primary"
+                                                <input type="text" id="inputTextModelo"
+                                                    class="form-control border-primary"
                                                     aria-label="default input example">
                                             </div>
                                         </div>
                                         <div class="row g-2 pb-lg-2 container-fluid">
                                             <div class="col-2 me-2">
                                                 <label for="inputTextPantalla" class="col-form-label">Pantalla:</label>
-                                                
                                             </div>
                                             <div class="col-3">
-                                                <input type="text" id="inputTextPantalla" class="form-control border-primary"
+                                                <input type="text" id="inputTextPantalla"
+                                                    class="form-control border-primary"
                                                     aria-label="default input example">
-                                                    
                                             </div>
                                             <div class="col-3 align-self-center">
-                                                <span >Pulgadas</span>
+                                                <span>Pulgadas</span>
                                             </div>
                                         </div>
                                         <div class="row g-2 pb-lg-2 container-fluid">
@@ -139,9 +291,8 @@
                                             <div class="col-3">
                                                 <input type="text" id="inputTextRom" class="form-control border-primary"
                                                     aria-label="default input example">
-                                                    
                                             </div>
-                                            <div class="col-6 align-self-center"> 
+                                            <div class="col-6 align-self-center">
                                                 <span>Almacenamiento Interno</span>
                                             </div>
                                         </div>
@@ -166,8 +317,8 @@
                                             <div class="m">
                                                 <label for="inputTextTitilo" class="form-label">Titulo
                                                     breve del anuncio:</label>
-                                                <input type="text" class="form-control border-primary" id="inputTextTitulo"
-                                                    placeholder="Titulo">
+                                                <input type="text" class="form-control border-primary"
+                                                    id="inputTextTitulo" placeholder="Titulo">
                                             </div>
                                         </div>
                                         <div class="row g-3  pb-lg-2  align-items-between">
@@ -175,7 +326,8 @@
                                                 <label for="inputTextVendedor" class="col-form-label">Vendedor: </label>
                                             </div>
                                             <div class="col-5">
-                                                <input type="text" id="inputTextVendedor" class="form-control border-primary"
+                                                <input type="text" id="inputTextVendedor"
+                                                    class="form-control border-primary"
                                                     aria-label="default input example">
                                             </div>
                                         </div>
@@ -185,7 +337,8 @@
                                                 </label>
                                             </div>
                                             <div class="col-5 ps-lg-1">
-                                                <input type="text" id="inputTextTelefono" class="form-control border-primary"
+                                                <input type="text" id="inputTextTelefono"
+                                                    class="form-control border-primary"
                                                     aria-label="default input example">
                                             </div>
                                         </div>
@@ -195,21 +348,18 @@
                                                     class="form-label">Descripcion:</label>
                                             </div>
                                             <div class="col-12">
-                                                <textarea class="form-control border-primary" id="exampleFormControlTextarea1"
-                                                    rows="3"></textarea>
+                                                <textarea class="form-control border-primary"
+                                                    id="exampleFormControlTextarea1" rows="3"></textarea>
                                             </div>
                                         </div>
                                     </div>
-
                                 </fieldset>
                             </div>
-
                             <div class="row d-flex justify-content-evenly p-0 m-0 mt-lg-3">
                                 <!-- Div de Para subir Imagenes -->
                                 <div class="col-lg-6 col-12">
                                     <fieldset class="container border border-primary row fieldset-pantalla rounded">
                                         <legend class="text float-none w-auto">Imagenes</legend>
-
                                         <div class="col-3 ">
                                             <button type="button" class="btn"><i
                                                     class="bi bi-plus-circle-fill text-primary"
@@ -240,269 +390,100 @@
                                         </div>
                                     </fieldset>
                                 </div>
-
                                 <div class=" col-lg-4 col-12">
                                     <!-- Div de Cuadro de precios -->
                                     <fieldset class="container row fieldset-pantalla rounded  border border-primary">
                                         <legend class="text float-none w-auto">Precio</legend>
-
                                         <div class="row g-3  pb-lg-2 m-0  align-items-between">
                                             <div class="col-3">
                                                 <label for="inputTextPrecio" class="col-form-label">Precio: </label>
                                             </div>
                                             <div class="col-5">
-                                                <input type="text" id="inputTextPrecio" class="form-control border-primary"
+                                                <input type="text" id="inputTextPrecio"
+                                                    class="form-control border-primary"
                                                     aria-label="default input example" placeholder="$">
                                             </div>
                                         </div>
-
                                     </fieldset>
                                     <div class=" container row">
                                         <div class="col-lg-12 p-0 m-0 d-flex justify-content-evenly pt-2 ">
                                             <button type="button" class="btn btn-outline-primary me-lg-2  "
                                                 data-bs-dismiss="modal" aria-label="Close"><i
                                                     class="bi bi-x-circle-fill"></i> Cancelar </button>
-                                            <button type="button" class="btn btn-primary text-secundary" id="liveToastBtn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-check-lg"></i>
+                                            <button type="button" class="btn btn-primary text-secundary"
+                                                id="liveToastBtn" data-bs-dismiss="modal" aria-label="Close"><i
+                                                    class="bi bi-check-lg"></i>
                                                 Crear</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Fin Modal Grande -->
         </div>
     </div>
-
-    <div class="navbar-md d-block  d-lg-none sticky-top">
-        <nav class="navbar navbar-expand-lg bg-primary navbar-dark ">
-            <div class="container-fluid d-flex justify-content-between">
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <form class="d-flex" role="search">
-                    <div class="input-group flex-nowrap">
-                        <span class="input-group-text" id="addon-wrapping"><i class="bi bi-search" style="color:#8E79BA"></i></span>
-                        <input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar"
-                            aria-describedby="addon-wrapping">
-                    </div>
-
-                </form>
-                <div class="offcanvas offcanvas-start bg-primary" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel" data-bs-scroll="true" data-bs-backdrop="false">
-                    <button type="button" class="btn-close btn-close-white m-3" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                    <div class="offcanvas-header justify-content-center mt-2">
-
-                        <h4 class="text-secundary"><img src="/icons/logo.png"><strong>TIENDA
-                                CELLPHONE</strong></h4>
-
-                    </div>
-
-                    <div class="offcanvas-body">
-
-                        <ul class="navbar-nav">
-
-                            <hr class="border border-secundary border-1 opacity-10 ">
-                            <li class="nav-item text-center align-self-center">
-                                <a class="nav-link active fw-bold" aria-current="page" href="index.html">Inicio</a>
-                            </li>
-                            <hr class="border border-secundary border-1 opacity-10 ">
-                            <li class="nav-item text-center align-self-center" data-bs-dismiss="offcanvas"
-                            aria-label="Close">
-                                <a class="nav-link fw-bold" href="#" data-bs-toggle="modal"
-                                    data-bs-target="#ModalPequeno" >Nuevo anuncio</a>
-
-                            </li>
-
-
-                            <hr class="border border-secundary border-1 opacity-10">
-                            <li class="nav-item text-center align-self-center  ">
-                                <a class="nav-link fw-bold" href="#">Carrito</a>
-                            </li>
-                            <hr class="border border-secundary border-1 opacity-10 ">
-                            <li class="nav-item text-center align-self-center">
-                                <a class="nav-link fw-bold" href="#">Estadisticas</a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- Modal pequeno -->
-    <div class="modal fade" id="ModalPequeno" tabindex="-1" aria-labelledby="ModalPequenoLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo anuncio</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12">
-                                <div id="carouselExampleIndicators" class="carousel slide carousel-dark carousel-fade">
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#carouselExampleIndicators"
-                                            data-bs-slide-to="0" class="active" aria-current="true"
-                                            aria-label="Slide 1"></button>
-                                        <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
-                                    </div>
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active no-img">
-                                            <button class="btn btn-primary mx-auto d-block my-5 text-white"><img
-                                                    src="/icons/nuevoAnuncio.png" alt="Agregar imagen"
-                                                    width="50"><br>Agregar
-                                                foto</button>
-
-                                        </div>
-                                        <!-- <div class="carousel-item">
-                                                    <img src="/icons/samsung.jpeg" class="d-block w-100" alt="...">
-                                                  </div>
-                                                  <div class="carousel-item">
-                                                    <img src="/icons/iphone.jpg" class="d-block w-100" alt="...">
-                                                  </div> -->
-                                    </div>
-                                    <button class="carousel-control-prev" type="button"
-                                        data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button"
-                                        data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-12 titulo-producto">
-                                <fieldset class="rounded border border-primary">
-                                    <legend class="text float-none w-auto m-2">Titulo
-                                    </legend>
-                                    <div class="input-group">
-
-                                        <textarea class="form-control border-primary border border-0" aria-label="With textarea"
-                                            placeholder="Escribe un titulo para tu producto..."></textarea>
-                                    </div>
-                                </fieldset>
-                            </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-6 mx-auto">
-                                <div class="input-group input-group-sm my-2 ">
-                                    <span class="input-group-text" id="precioNuevoProducto-span">Precio:</span>
-                                    <input type="text" class="form-control border-primary border" placeholder="Precio"
-                                        aria-label="precioNuevoProducto-input"
-                                        aria-describedby="precioNuevoProducto-span">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6 mx-auto">
-                                <div class="input-group input-group-sm my-2 ">
-                                    <span class="input-group-text" id="vendedor-span">Vendedor:</span>
-                                    <input type="text" class="form-control border-primary border " placeholder="Nombre del vendedor"
-                                        aria-label="vendedor-input" aria-describedby="vendedor-span">
-                                </div>
-                            </div>
-                            <div class="col-6 mx-auto">
-                                <div class="input-group input-group-sm my-2 ">
-                                    <span class="input-group-text" id="telefonoVendedor-span">Telefono:</span>
-                                    <input type="text" class="form-control border-primary border " placeholder="xxxx-xxxx"
-                                        aria-label="telefonoVendedor-input" aria-describedby="telefonoVendedor-span">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-group">
-                                <textarea class="form-control border-primary border border-1 my-1 " aria-label="detalles-hardware"
-                                    placeholder="Escribe los detalles tecnicos del producto..."></textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-group">
-                                <textarea class="form-control border-primary border border-1 " aria-label="estado-producto"
-                                    placeholder="Escribe el estado del producto..."></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary text-secundary" id="liveToastBtn1" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-check-lg"></i>
-                        Crear</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
+    <!-- Modal-->
 
     <!-- DIV MAIN -->
     <div class="container">
         <div class="container pt-lg-3">
             <div class="row d-flex justify-content-evenly">
-            <div class="col-12 col-lg-5 p-1">
-                <div id="carouselExampleIndicators" class="carousel slide  rounded-3" data-bs-ride="true">
-
-                    <div class="carousel-inner rounded-3">
-                        <div class="carousel-item active">
-                            <img src="icons/iphone-12-pro-blue-1.webp" class="d-block w-100" alt="Iphone 13">
+                <div class="col-12 col-lg-5 p-1">
+                    <div id="carouselExampleIndicators" class="carousel slide  rounded-3" data-bs-ride="true">
+                        <div class="carousel-inner rounded-3">
+                            <div class="carousel-item active">
+                                <img src="icons/iphone-12-pro-blue-1.webp" class="d-block w-100" alt="Iphone 13">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="icons/iphone-12-pro-blue-1.webp" class="d-block w-100"
+                                    alt="Iphone 13 Vertical">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="icons/iphone-12-pro-blue-1.webp" class="d-block w-100" alt="Iphone 13 atras">
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="icons/iphone-12-pro-blue-1.webp" class="d-block w-100" alt="Iphone 13 Vertical">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="icons/iphone-12-pro-blue-1.webp" class="d-block w-100" alt="Iphone 13 atras">
-                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                    </div>            
-            </div>
-
-
-            <div class="col-12 col-lg-5 p-1 p-lg-3">
-                <h5 class="pb-2  m-0 m-lg-1">Iphone 6 pantalla de 8 pulgadas, 64Gb internos,
-                    2Gb de Ram, Sólo Banda Tigo, Nuevo</h5>
-                <h2 class="pb-1 m-0 m-lg-2 precio">$ 235.00</h2>
-                <button type="button" class=" btnInferior text-secundary comprarBtn btn btn-primary btn-md m-lg-3 d-none d-md-non d-lg-block">Comprar</button>
-                <button type="button" class=" btnInferior inicioBtn btn btn-primary btn-md d-none"> Inicio</button>
-                <div class="container infoDeVendedor border border-1 border-primary d-flex justify-content-between  m-0 m-lg-2 p-lg-2 rounded-3 "> 
-                    <p class="d-inline-flex m-0 ">Vendedor: Juan Perez </p> <p class="d-inline-flex  m-0">Telefono: 77242727</p>
                 </div>
-                
-            </div>
+                <div class="col-12 col-lg-5 p-1 p-lg-3">
+                    <h5 class="pb-2  m-0 m-lg-1">Iphone 6 pantalla de 8 pulgadas, 64Gb internos,
+                        2Gb de Ram, Sólo Banda Tigo, Nuevo</h5>
+                    <h2 class="pb-1 m-0 m-lg-2 precio">$ 235.00</h2>
+                    <button type="button"
+                        class=" btnInferior text-secundary comprarBtn btn btn-primary btn-md m-lg-3 d-none d-md-non d-lg-block">Comprar</button>
+                    <button type="button" class=" btnInferior inicioBtn btn btn-primary btn-md d-none"> Inicio</button>
+                    <div
+                        class="container infoDeVendedor border border-1 border-primary d-flex justify-content-between  m-0 m-lg-2 p-lg-2 rounded-3 ">
+                        <p class="d-inline-flex m-0 ">Vendedor: Juan Perez </p>
+                        <p class="d-inline-flex  m-0">Telefono: 77242727</p>
+                    </div>
+                </div>
                 <div class=" col-lg-6  d-none d-md-non d-lg-block text-center">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="p-2 me-lg-1 active btn btn-primary rounded-circle" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="p-2 btn btn-primary rounded-circle" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="p-2 ms-lg-1 btn  btn-primary rounded-circle" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="p-2 me-lg-1 active btn btn-primary rounded-circle" aria-current="true"
+                        aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        class="p-2 btn btn-primary rounded-circle" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        class="p-2 ms-lg-1 btn  btn-primary rounded-circle" aria-label="Slide 3"></button>
                 </div>
                 <div class=" col-lg-6 d-flex justify-content-center ">
-
                 </div>
-            </div> 
+            </div>
         </div>
-    
         <div class="container">
-            
             <div class="row d-flex justify-content-center">
                 <h2 class="text-center m-0 mb-3">Descripcion</h2>
                 <div class="col-12 col-lg-4 border border-2 border-primary m-lg-1 me-lg-4   rounded-3">
@@ -525,13 +506,13 @@
                         viene con su caja original y con todos sus accesorio,
                         todo funcionando al 100%
                     </p>
-                </div >
-            </div>  
+                </div>
+            </div>
         </div>
-        
-        <div class="container-fluid sticky-bottom d-block  d-lg-none text-center ">
-            <button type="button" class="btn btn-primary btn-lg " > <a class="nav-link active" aria-current="page" href="index.html">INICIO</a> </button>
-            <button type="button" class="btn btn-primary btn-lg "> COMPRAR</button>
+        <div class="container d-flex justify-content-center gap-3 d-block d-lg-none position-fixed bottom-0 ">
+            <button type="button" class="btn btn-primary text-secundary btn-lg "> <a class="nav-link active"
+                    aria-current="page" href="index.html">INICIO</a> </button>
+            <button type="button" class="btn btn-primary text-secundary btn-lg "> COMPRAR</button>
         </div>
     </div>
     <div class="toast-container position-fixed bottom-0 end-0 p-3" tabindex="-1">
@@ -561,26 +542,24 @@
         </div>
     </div>
     <script>
-            const toastTrigger = document.getElementById('liveToastBtn')
-            const toastLiveExample = document.getElementById('liveToast')
-            if (toastTrigger) {
+        const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+        if (toastTrigger) {
             toastTrigger.addEventListener('click', () => {
                 const toast = new bootstrap.Toast(toastLiveExample)
                 toast.show()
             })
-            }
-            const toastTrigger1 = document.getElementById('liveToastBtn1')
-            const toastLiveExample1 = document.getElementById('liveToast1')
-            if (toastTrigger1) {
+        }
+        const toastTrigger1 = document.getElementById('liveToastBtn1')
+        const toastLiveExample1 = document.getElementById('liveToast1')
+        if (toastTrigger1) {
             toastTrigger1.addEventListener('click', () => {
                 const toast1 = new bootstrap.Toast(toastLiveExample1)
                 toast1.show()
             })
-            }
-
-
+        }
     </script>
-
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
