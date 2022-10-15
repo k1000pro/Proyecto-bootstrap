@@ -1,23 +1,24 @@
 $primary: #8E79BA;
 $secundary: #ffffff;
-$warning:  #ffc107;
-$info:  #0dcaf0;
-$success: #198754;
-$danger:  #dc3545;
-$dark: black;
-$light: #d613c2;
-
+$carousel-control-color: #8E79BA;
 
 $theme-colors:(
     "primary": $primary,
-    "secundary": $secundary, 
-    "warning": $warning,
-    "info": $info,
-    "success": $success,
-    "danger" : $danger,
-    "dark" : $dark, 
-    "light" : $light
+    "secundary":$secundary,
+    "success":#198754,
+    "info":#0dcaf0,
+    "warning":#ffc107,
+    "danger": #dc3545,
+    "light":#f8f9fa,
+    "dark":#212529
 );
 
+$font-family-base: Montserrat;
+$carousel-transition-duration:0.5s;
+$modal-show-transform: scale(1);
+$carousel-dark-control-icon-filter:     None;
+$carousel-control-prev-icon-bg:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+$carousel-control-next-icon-bg:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
 
-@import "./node_modules/bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import "./node_modules/bootstrap/scss/bootstrap.scss"

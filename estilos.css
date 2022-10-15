@@ -1,60 +1,24 @@
 ::-webkit-scrollbar {
     width: 12px;
-               /* width of the entire scrollbar */
   }
-  
 ::-webkit-scrollbar-track {
     background: rgb(209, 209, 209);
     border-radius: 20px;
-
-            /* color of the tracking area */
   }
-  
 ::-webkit-scrollbar-thumb {
-    background-color: #8E79BA;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 3px solid rgb(209, 209, 209);  /* creates padding around scroll thumb */
+    background-color: #8E79BA;
+    border-radius: 20px;
+    border: 3px solid rgb(209, 209, 209); 
   }
-ul h4{
-    color:#ffffff !important;
-
-}
-a{
-    font-weight: bold !important;
-}
-ul hr{
-    margin: 5px;
-    border-color: #ffffff;
-}
-fieldset{
-    border: solid 1px #000;
-}
-.navbar{
-    text-shadow: 0 2px 7px rgba(0, 0, 0, 0.7);
-}
- .navbar-lg .navbar-nav img{
-    filter: drop-shadow(0 2px 7px rgba(0, 0, 0, 0.7));
-}
-
 .sidebar-lg-container{
-    overflow-y: scroll;
-    height: 100% !important;
     font-size: 0.8em;
-
 }
 .precio-form input,.order-form select{
     width: 20px !important;
 }
-
 .card{
     max-height:40vh;
     min-height: 300px;
-    width: 100%;
-    overflow: hidden    ;
-    font-size: 0.8em;
-    align-items: center;
-    
-
 }
 .selectProductsPerPage{
     max-width: 80px;
@@ -67,7 +31,6 @@ fieldset{
     cursor: inherit !important;
     background: #fff !important;
 }
-
 .card:hover{
     cursor: pointer;
     background: #8E79BA;
@@ -75,49 +38,15 @@ fieldset{
 .card:hover .card-body{
     color: #ffffff !important;
 }
-
-.card>img{
+.card img{
     width: 70%;
     object-fit: contain !important;
     height: 200px !important;
 }
-
-    
-.navbar-collapse,.offcanvas,#nuevoSwitch,input[type="radio"],.card{
+#nuevoSwitch,input[type="radio"],.card{
     transition: all 0.3s;
 }
-
-select{
-    border: 1px solid #8E79BA !important;
-    
-}
-
-
-legend{
-    font-size: 1.4em;
-}
-.navbar-md{
-    display:none !important;
-}
-.navbar-lg form{
+.searchInputLg{
     width: 35%;
     margin-left:10%;
 }
-.sidebar-md-container{
-    display: None !important;
-}
-@media (max-width: 992px) {
-    .navbar-md{
-        display: block !important;
-    }
-    .navbar-lg{
-        display: none !important;
-    }
-    .sidebar-md-container{
-        display: block !important;
-    }
-    .sidebar-lg-container{
-        display: none !important;
-    }
-}
-

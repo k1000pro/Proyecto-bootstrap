@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icons/logo.png">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="articulos.css">
+    <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <title>Tienda De Telefonos</title>
 </head>
+
 <body>
     <!-- Navbar -->
     <div class="navbar-lg sticky-top">
@@ -16,6 +19,7 @@
             <div class="container-fluid d-none d-md-none d-lg-flex justify-content-between ">
                 <a class="navbar-brand" href="index.html"><img src="/icons/logo.png"><strong>TIENDA
                         CELLPHONE</strong></a>
+
                 <form class="d-flex searchInputLg" role="search">
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text shadow" id="addon-wrapping"><i class="bi bi-search"
@@ -25,16 +29,17 @@
                     </div>
                 </form>
                 <ul class="navbar-nav flex-row flex-wrap ms-md-auto align-items-center ">
-                    <li class="nav-item text-center align-self-center ">
-                        <a class="nav-link active fw-bold" aria-current="page" href="#">Inicio</a>
+                    <li class="nav-item text-center align-self-center">
+                        <a class="nav-link fw-bold" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item text-center align-self-center">
-                        <a class="nav-link fw-bold" href="#">Estadisticas</a>
+                        <a class="nav-link fw-bold" href="#">Estadísticas</a>
                     </li>
                     <li class="nav-item text-center align-self-center">
                         <a class="nav-link" href="#"><i class="bi bi-plus-circle-fill" style="font-size: 25px;"
                                 data-bs-toggle="modal" data-bs-target="#ModalGrande"></i></a>
                     </li>
+
                     <li class="nav-item text-center align-self-center">
                         <a class="nav-link" href="#"><i class="bi bi-cart-fill" style="font-size: 30px;"></i>
                             <span
@@ -43,6 +48,7 @@
                             </span></a>
                     </li>
                 </ul>
+
             </div>
             <div class="container-fluid d-lg-none d-flex justify-content-between">
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -56,25 +62,32 @@
                         <input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar"
                             aria-describedby="addon-wrapping">
                     </div>
+
                 </form>
                 <div class="offcanvas offcanvas-start bg-primary" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel" data-bs-scroll="true" data-bs-backdrop="false">
                     <button type="button" class="btn-close btn-close-white m-3" data-bs-dismiss="offcanvas"
-                        aria-label="Close"> HOLaa</button>
+                        aria-label="Close"></button>
                     <div class="offcanvas-header justify-content-center mt-2">
+
                         <h4 class="text-secundary"><img src="/icons/logo.png"><strong>TIENDA
                                 CELLPHONE</strong></h4>
+
                     </div>
+
                     <div class="offcanvas-body">
+
                         <ul class="navbar-nav">
+
                             <hr class="border border-secundary border-1 opacity-10 ">
                             <li class="nav-item text-center align-self-center">
                                 <a class="nav-link active fw-bold" aria-current="page" href="index.html">Inicio</a>
                             </li>
                             <hr class="border border-secundary border-1 opacity-10 ">
                             <li class="nav-item text-center align-self-center " data-bs-dismiss="offcanvas"
-                            aria-label="Close">
-                                <a class="nav-link fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#ModalGrande" >Nuevo
+                                aria-label="Close">
+                                <a class="nav-link fw-bold" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#ModalGrande">Nuevo
                                     anuncio</a>
                             </li>
                             <hr class="border border-secundary border-1 opacity-10">
@@ -85,6 +98,7 @@
                             <li class="nav-item text-center align-self-center">
                                 <a class="nav-link fw-bold" href="#">Estadisticas</a>
                             </li>
+
                         </ul>
                     </div>
                 </div>
@@ -92,7 +106,6 @@
         </nav>
     </div>
     <!-- Fin de Navbar -->
-
     <!-- Modal -->
     <div class="modal fade " id="ModalGrande" tabindex="-1" aria-labelledby="ModalGrandeLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
@@ -208,7 +221,8 @@
             <!-- Modal Grande -->
             <div class="modal-content d-none d-md-non d-lg-block">
                 <div class="modal-header p-0 p-xl-2 bg-primary">
-                    <h1 class="modal-title fs-9 container d-flex justify-content-center p-0" id="ModalGrandeLabel">Nuevo
+                    <h1 class="modal-title fs-9 container d-flex justify-content-center p-0 text-white"
+                        id="ModalGrandeLabel">Nuevo
                         anuncio</h1>
                 </div>
                 <div class="modal-body p-2 d-flex justify-content-center align-items-center">
@@ -425,32 +439,31 @@
             <!-- Fin Modal Grande -->
         </div>
     </div>
-    <!-- Modal-->
 
     <!-- DIV MAIN -->
     <div class="container">
         <div class="container pt-lg-3">
             <div class="row d-flex justify-content-evenly">
                 <div class="col-12 col-lg-5 p-1">
-                    <div id="carouselExampleIndicators" class="carousel slide  rounded-3" data-bs-ride="true">
-                        <div class="carousel-inner rounded-3">
-                            <div class="carousel-item active">
-                                <img src="icons/iphone-12-pro-blue-1.webp" class="d-block w-100" alt="Iphone 13">
+                    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="5000">
+                                <img src="/icons/huawei.jpg" class="d-block w-100" alt="Producto">
                             </div>
-                            <div class="carousel-item">
-                                <img src="icons/iphone-12-pro-blue-1.webp" class="d-block w-100"
-                                    alt="Iphone 13 Vertical">
+                            <div class="carousel-item" data-bs-interval="5000">
+                                <img src="/icons/iphone.jpg" class="d-block w-100" alt="Producto">
                             </div>
-                            <div class="carousel-item">
-                                <img src="icons/iphone-12-pro-blue-1.webp" class="d-block w-100" alt="Iphone 13 atras">
+                            <div class="carousel-item" data-bs-interval="5000">
+                                <img src="/icons/samsung.jpeg" class="d-block w-100" alt="Producto">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleDark"
                             data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="carousel-control-prev-icon " aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
@@ -462,7 +475,7 @@
                         2Gb de Ram, Sólo Banda Tigo, Nuevo</h5>
                     <h2 class="pb-1 m-0 m-lg-2 precio">$ 235.00</h2>
                     <button type="button"
-                        class=" btnInferior text-secundary comprarBtn btn btn-primary btn-md m-lg-3 d-none d-md-non d-lg-block">Comprar</button>
+                        class=" btnInferior text-secundary comprarBtn btn btn-primary btn-lg m-lg-3 d-none d-md-non d-lg-block">Comprar</button>
                     <button type="button" class=" btnInferior inicioBtn btn btn-primary btn-md d-none"> Inicio</button>
                     <div
                         class="container infoDeVendedor border border-1 border-primary d-flex justify-content-between  m-0 m-lg-2 p-lg-2 rounded-3 ">
@@ -471,13 +484,13 @@
                     </div>
                 </div>
                 <div class=" col-lg-6  d-none d-md-non d-lg-block text-center">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="p-2 me-lg-1 active btn btn-primary rounded-circle" aria-current="true"
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                        class="p-2 ms-lg active btn btn-primary rounded-circle" aria-current="true"
                         aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        class="p-2 btn btn-primary rounded-circle" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        class="p-2 ms-lg-1 btn  btn-primary rounded-circle" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        class="p-2 ms-lg btn btn-primary rounded-circle" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        class=" p-2 ms-lg btn btn-primary rounded-circle" aria-label="Slide 3"></button>
                 </div>
                 <div class=" col-lg-6 d-flex justify-content-center ">
                 </div>
@@ -511,33 +524,33 @@
         </div>
         <div class="container d-flex justify-content-center gap-3 d-block d-lg-none position-fixed bottom-0 ">
             <button type="button" class="btn btn-primary text-secundary btn-lg "> <a class="nav-link active"
-                    aria-current="page" href="index.html">INICIO</a> </button>
-            <button type="button" class="btn btn-primary text-secundary btn-lg "> COMPRAR</button>
+                    aria-current="page" href="index.html">Inicio</a> </button>
+            <button type="button" class="btn btn-primary text-secundary btn-lg ">Comprar</button>
         </div>
     </div>
-    <div class="toast-container position-fixed bottom-0 end-0 p-3" tabindex="-1">
+    <div class="toast-container position-fixed bottom-0 end-0 p-3 " tabindex="-1">
         <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <i class="bi bi-hand-thumbs-up-fill">ㅤ</i>
-                <strong class="me-auto"> Nuevo Anuncio</strong>
-                <small>1 mins ago</small>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <div class="toast-header bg-primary text-white">
+                <i class="bi bi-check-lg"></i>
+                <strong class="me-auto"></strong>
+                <small>Hace un momento</small>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
-                <p>Su Articulo Ha Sido Guardado Con Exito</p>
+                <p>Su articulo ha sido guardado con exito</p>
             </div>
         </div>
     </div>
-    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div class="toast-container position-fixed bottom-0 end-0 p-3 " tabindex="-1">
         <div id="liveToast1" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <i class="bi bi-hand-thumbs-up-fill">ㅤ</i>
-                <strong class="me-auto"> Nuevo Anuncio</strong>
-                <small>1 mins ago</small>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <div class="toast-header bg-primary text-white">
+                <i class="bi bi-check-lg"></i>
+                <strong class="me-auto"></strong>
+                <small>Hace un momento</small>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
-                <p>Su Articulo Ha Sido Guardado Con Exito</p>
+                <p>Su articulo ha sido guardado con exito</p>
             </div>
         </div>
     </div>
